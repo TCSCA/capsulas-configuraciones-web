@@ -18,7 +18,7 @@ export function ConfigTransactions() {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const res = await fetch("http://172.16.90.148:8086/api/transactions");
+        const res = await fetch("http://172.16.90.112:8086/api/transactions");
         if (!res.ok) throw new Error("Error al obtener transacciones");
         const data: Transaction[] = await res.json();
         setTransactions(data);
@@ -46,8 +46,8 @@ export function ConfigTransactions() {
 
     try {
       const url = checked
-        ? "http://172.16.90.148:8086/api/transactions/enable"
-        : "http://172.16.90.148:8086/api/transactions/disable";
+        ? "http://172.16.90.112:8086/api/transactions/enable"
+        : "http://172.16.90.112:8086/api/transactions/disable";
 
       const res = await fetch(url, {
         method: "POST",
