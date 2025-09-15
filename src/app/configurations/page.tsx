@@ -3,7 +3,7 @@ import { ConfigTransactions } from "@/components/transactions/config-transaction
 
 const ConfigurationsPage = () => {
     return (
-        <div className="flex flex-col p-4 gap-2">
+        <div className="flex flex-col p-4 gap-4">
             <span className="font-bold text-2xl"> Módulo de Configuraciones</span>
             <ConfigEmail></ConfigEmail>
             {/* <ConfigEmailReceiver></ConfigEmailReceiver> */}

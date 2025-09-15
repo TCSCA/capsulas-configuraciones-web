@@ -78,9 +78,9 @@ export function ConfigTransactions() {
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white shadow-sm w-full">
+    <div className="rounded-lg border border-border bg-card text-card-foreground shadow-sm w-full">
       {/* Card Header */}
-      <div className="border-b px-6 py-4">
+      <div className="border-b border-border px-6 py-4">
         <h2 className="text-lg font-semibold">Configuración de Transacciones</h2>
       </div>
 
@@ -89,23 +89,25 @@ export function ConfigTransactions() {
         {transactions.map((t) => (
           <div
             key={`${t.idTransaction}-${t.idProfile}`}
-            className="flex items-center justify-between border rounded-lg p-3"
+            className="flex items-center justify-between border border-border rounded-lg p-3"
           >
             <div>
               <p className="font-medium">{t.transaction}</p>
-              <p className="text-sm text-gray-500">{t.url}</p>
-              <p className="text-xs text-gray-400">Perfil: {t.idProfile}</p>
+              <p className="text-sm text-muted-foreground">{t.url}</p>
+              <p className="text-xs text-muted-foreground">
+                Perfil: {t.idProfile}
+              </p>
             </div>
 
             <Switch.Root
-              className={`w-11 h-6 rounded-full border border-gray-300 relative
-                          ${t.status ? "bg-blue-600" : "bg-gray-200"} 
-                          focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-11 h-6 rounded-full border border-border relative
+                          ${t.status ? "bg-primary" : "bg-muted"} 
+                          focus:outline-none focus:ring-2 focus:ring-primary`}
               checked={t.status}
               onCheckedChange={(checked) => toggleTransaction(t, checked)}
             >
               <Switch.Thumb
-                className={`block w-5 h-5 bg-white rounded-full shadow-md
+                className={`block w-5 h-5 bg-card rounded-full shadow-md
                             transition-transform duration-200
                             ${t.status ? "translate-x-5" : "translate-x-0"}`}
               />

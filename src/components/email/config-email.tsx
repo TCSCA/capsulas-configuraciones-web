@@ -114,9 +114,9 @@ export function ConfigEmail() {
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white shadow-sm">
+    <div className="rounded-lg border border-border bg-card text-card-foreground shadow-sm">
       {/* Card Header */}
-      <div className="border-b px-6 py-4">
+      <div className="border-b border-border px-6 py-4">
         <h2 className="text-lg font-semibold">Configuración de Correo Electrónico</h2>
       </div>
 
@@ -143,8 +143,8 @@ export function ConfigEmail() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full rounded-md bg-blue-600 px-4 py-2 text-white font-medium 
-                         hover:bg-blue-700 disabled:opacity-50"
+              className="w-full rounded-md bg-primary text-primary-foreground px-4 py-2 font-medium 
+                         hover:opacity-90 disabled:opacity-50"
             >
               {isSubmitting ? "Guardando..." : "Guardar Cambios"}
             </button>

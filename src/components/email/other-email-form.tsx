@@ -15,7 +15,7 @@ export function OtherEmailForm({ formData, onChange, className }: OtherEmailForm
   return (
     <div className={`space-y-4 ${className ?? ""}`}>
       <div className="space-y-2">
-        <Label.Root htmlFor="title" className="text-sm font-medium">
+        <Label.Root htmlFor="title" className="text-sm font-medium text-foreground">
           Título del correo
         </Label.Root>
         <textarea
@@ -23,15 +23,16 @@ export function OtherEmailForm({ formData, onChange, className }: OtherEmailForm
           value={formData.title}
           onChange={(e) => onChange("title", e.target.value)}
           placeholder="Título del mensaje..."
-          rows={6}
+          rows={3}
           required
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm 
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-border bg-input text-foreground 
+                     placeholder:text-muted px-3 py-2 text-sm shadow-sm 
+                     focus:outline-none focus:ring-2 focus:ring-primary"
         />
       </div>
 
       <div className="space-y-2">
-        <Label.Root htmlFor="subject" className="text-sm font-medium">
+        <Label.Root htmlFor="subject" className="text-sm font-medium text-foreground">
           Asunto del correo
         </Label.Root>
         <input
@@ -40,13 +41,14 @@ export function OtherEmailForm({ formData, onChange, className }: OtherEmailForm
           onChange={(e) => onChange("subject", e.target.value)}
           placeholder="Asunto por defecto"
           required
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm 
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-border bg-input text-foreground 
+                     placeholder:text-muted px-3 py-2 text-sm shadow-sm 
+                     focus:outline-none focus:ring-2 focus:ring-primary"
         />
       </div>
 
       <div className="space-y-2">
-        <Label.Root htmlFor="body" className="text-sm font-medium">
+        <Label.Root htmlFor="body" className="text-sm font-medium text-foreground">
           Cuerpo del correo
         </Label.Root>
         <textarea
@@ -56,13 +58,14 @@ export function OtherEmailForm({ formData, onChange, className }: OtherEmailForm
           placeholder="Cuerpo del mensaje..."
           rows={6}
           required
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm 
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-border bg-input text-foreground 
+                     placeholder:text-muted px-3 py-2 text-sm shadow-sm 
+                     focus:outline-none focus:ring-2 focus:ring-primary"
         />
       </div>
 
       <div className="space-y-2">
-        <Label.Root htmlFor="footer" className="text-sm font-medium">
+        <Label.Root htmlFor="footer" className="text-sm font-medium text-foreground">
           Pié de página del correo
         </Label.Root>
         <textarea
@@ -70,10 +73,11 @@ export function OtherEmailForm({ formData, onChange, className }: OtherEmailForm
           value={formData.footer}
           onChange={(e) => onChange("footer", e.target.value)}
           placeholder="Pié de página del mensaje..."
-          rows={6}
+          rows={3}
           required
-          className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm 
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-border bg-input text-foreground 
+                     placeholder:text-muted px-3 py-2 text-sm shadow-sm 
+                     focus:outline-none focus:ring-2 focus:ring-primary"
         />
       </div>
     </div>
